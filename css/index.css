@@ -1,0 +1,716 @@
+#box .section:first-child {
+    position: relative;
+}
+body a:first-child {
+    background: url('../images/00-go.png');
+    position: fixed;
+    width: 101px;
+    height: 101px;
+    right: 40px;
+    top: 40px;
+    z-index: 10;
+}
+body a:nth-child(2){
+    background: url('../images/00-more.png');
+    width: 174px;
+    height: 61px;
+    position: fixed;
+    bottom: 100px;
+    right: 80px;
+    animation: more .4s infinite linear alternate;
+    z-index: 10;
+}
+@keyframes more {
+    from {transform: translateY(-10px)};
+    to {transform: translateY(10px)};
+}
+/* 第一屏 */
+.section:first-child .wrapper {
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url('../images/01-bg.png');
+}
+.section:first-child .wrapper div:nth-child(1) {
+    background-image: url('../images/01-fly.png');
+    width: 470px;
+    height: 50px;
+    position: absolute;
+    right: -50px;
+    top: 0;
+    animation: fly .4s linear infinite alternate;
+}
+@keyframes fly {
+    from {transform: translateY(20px)};
+    to {transform: translateY(-20px)};
+}
+.section:first-child .wrapper div:nth-child(2) {
+    background-image: url('../images/01-goods.png');
+    width: 824px;
+    height: 274px;
+    position: absolute;
+    bottom: 140px;
+    right: 0; 
+}
+.section:first-child .wrapper div:last-child {
+    background-image: url('../images/01-sofa.png');
+    width: 134px;
+    height: 147px;
+    position: absolute;
+    top: 140px;
+    left: 240px;
+    animation: fly .8s linear infinite alternate;
+}
+
+/* 第二屏 */
+.section:nth-child(2) {
+    background: url('../images/02-bg.png') no-repeat center bottom;
+    position: relative;
+    
+}
+.section:nth-child(2) .wrapper {
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.section:nth-child(2) .wrapper .text {
+    position: absolute;
+    top: 10px;
+    left: 250px;
+}
+.section:nth-child(2) .wrapper .text div:nth-child(1) {
+    background-image: url('../images/02-text.png');
+    width: 363px;
+    height: 27px;
+    position: absolute;
+    opacity: 0;
+}
+.section:nth-child(2) .wrapper .text div:nth-child(2) {
+    background-image: url('../images/02-text1.png');
+    width: 361px;
+    height: 25px;
+    position: absolute;
+}
+.section:nth-child(2).now .wrapper .text div:nth-child(1) {
+    transition: all 1s 1s;
+    opacity: 1; 
+}
+.section:nth-child(2).now .wrapper .text div:nth-child(2) {
+    transition: all 1s;
+    opacity: 0;
+}
+.section:nth-child(2) .wrapper .search {
+    position: absolute;
+    right: 177px;
+    top: 120px;
+    transform: translateX(900px);
+}
+.section:nth-child(2) .sofa {
+    background-image: url('../images/02-sofa.png');
+    width: 207px;
+    height: 166px;
+    position: absolute;
+    top: 135px;
+    left: 281px;
+    opacity: 0;
+    transform: scale(.5);
+    z-index: 10;
+}
+.section:nth-child(2) .sofa.animated {
+    animation: sofa 1s;
+}
+@keyframes sofa {
+    from {opacity: 1;}
+    to {opacity: 1;transform: scale(1) translateY(773px) translateX(-68px)}
+}
+.section:nth-child(2) .wrapper .search div:first-child {
+    background-image: url('../images/02-search.png');
+    width: 222px;
+    height: 45px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.section:nth-child(2).now .wrapper .search {
+    animation: search 3s linear forwards;
+}
+@keyframes search {
+    0% {}
+    33.33% {transform: translateX(-150px) translateY(130px)}
+    66.66% { transform: translateX(-150px) translateY(130px)}
+    100% {transform: scale(.7)}
+}
+.section:nth-child(2) .wrapper .search div:last-child {
+    background-image: url('../images/02-key.png');
+    width: 68px;
+    height: 32px;
+    position: absolute;
+    right: 60px;
+    top: 3px;
+    z-index: 1;
+}
+.section:nth-child(2) .wrapper .goods {
+    background-image: url('../images/02-goods.png');
+    width: 441px;
+    height: 218px;
+    position: absolute;
+    bottom: 210px;
+    left: 220px;
+    transform: scale(0);
+}
+.section:nth-child(2).now .wrapper .goods {
+    transition: transform 2s 2s;
+    transform: scale(1);
+    transform-origin: right bottom;
+}
+
+/* 第三屏 */
+.section:nth-child(3) {
+    position: relative;
+}
+.section:nth-child(3) .wrapper {
+    background-image: url('../images/03-bg.png');
+    width: 990px;
+    height: 600px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.section:nth-child(3) .wrapper .color {
+    width: 296px;
+    height: 131px;
+    position: absolute;
+    right: 160px;
+    bottom: 195px;
+}
+.section:nth-child(3) .color div:nth-child(1) {
+    position: absolute;
+    background-image: url('../images/03-change01.gif');
+    width: 296px;
+    height: 131px;
+}
+.section:nth-child(3) .color div:nth-child(2) {
+    position: absolute;
+    background-image: url('../images/03-change02.gif');
+    width: 296px;
+    height: 131px;
+    opacity: 0;
+}
+.section:nth-child(3) .car {
+    position: absolute;
+    width: 218px;
+    height: 58px;
+    bottom: 130px;
+    right: 238px;
+}
+.section:nth-child(3) .car div:first-child {
+    position: absolute;
+    width: 218px;
+    height: 58px;
+    background-image: url('../images/03-cart01.gif');
+}
+.section:nth-child(3) .car div:last-child {
+    position: absolute;
+    width: 218px;
+    height: 58px;
+    opacity: 0;
+    background-image: url('../images/03-cart02.gif');
+}
+.section:nth-child(3) .sofa {
+    position: absolute;
+    background-image: url('../images/02-sofa.png');
+    width: 207px;
+    height: 166px;
+    top: 182px;
+    left: 258px;
+    display: none;
+    z-index: 5;
+}
+.section:nth-child(3) .sofa.animated-04 {
+    animation: sofa-04 1s linear;
+}
+@keyframes sofa-04 {
+    from {}
+    to {transform: translate(80px,680px) rotate(30deg)}
+}
+.section:nth-child(3).now .car div:last-child {
+    opacity: 1;
+}
+.section:nth-child(3).now .color div:nth-child(2) {
+    opacity: 1;
+}
+
+/* 第四屏 */
+.section:nth-child(4) {
+    background-image: url('../images/04-bg.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.section:nth-child(4) .cloud {
+    width: 882px;
+    height: 120px;
+    background-image: url('../images/04-cloud.png');
+    position: absolute;
+    top: 80px;
+    animation: cloud 50s linear alternate;
+}
+@keyframes cloud {
+    from {}
+    to {transform: translateX(900px)}
+}
+.section:nth-child(4) .car {
+    position: absolute;
+    bottom: 10px;
+    left: 550px;
+}
+.section:nth-child(4) .car div:first-child {
+    background-image: url('../images/04-cart.png');
+    width: 407px;
+    height: 346px;
+    z-index: 10;
+    position: absolute;
+    bottom: 50px;
+}
+.section:nth-child(4) .car div:last-child {
+    background-image: url('../images/04-sofa.png');
+    width: 204px;
+    height: 198px;
+    position: absolute;
+    left: 150px;
+    bottom: 250px;
+    opacity: 0;
+}
+.section:nth-child(4).now .car div:last-child {
+    opacity: 1;
+}
+.section:nth-child(4).now .car {
+    animation: car-04 2s linear forwards;
+}
+@keyframes car-04 {
+    from{}
+    to {transform: translateX(1200px)}
+}
+.section:nth-child(4) .text {
+    position: absolute;
+    top: 200px;
+    left: 550px;
+}
+.section:nth-child(4) .text div:first-child {
+    background-image: url('../images/04-text01.png');
+    width: 429px;
+    height: 31px;
+    position: absolute;
+}
+.section:nth-child(4) .text div:last-child {
+    background-image: url('../images/04-text02.png');
+    background-repeat: no-repeat;
+    width: 429px;
+    height: 32px;
+    position: absolute;
+    opacity: 0;
+}
+.section:nth-child(4).now .text div:first-child {
+    opacity: 0;
+    transition: all 1s;
+}
+.section:nth-child(4).now .text div:last-child {
+    opacity: 1;
+    transition: all 1s 1s;
+}
+.section:nth-child(4) .buy {
+    position: absolute;
+    bottom: 480px;
+    left: 630px;
+    opacity: 0;
+}
+.section:nth-child(4) .buy div:first-child {
+    position: absolute;
+    background-image: url('../images/04-address01.png');
+    width: 283px;
+    height: 270px;
+}
+.section:nth-child(4) .buy div:last-child {
+    position: absolute;
+    background-image: url('../images/04-address02.png');
+    width: 173px;
+    height: 47px;
+    left: 50px;
+    top: 60px;
+    opacity: 0;
+}
+.section:nth-child(4).now .buy {
+    animation: buy linear 1s 2s forwards;
+}
+.section:nth-child(4).now .buy div:last-child {
+    animation: buy 1s 3s linear forwards;
+}
+@keyframes buy {
+    from{}
+    to{opacity: 1;}
+}
+
+/* 第五屏 */
+.section:nth-child(5) {
+    background: url('../images/05-bg.png') no-repeat;
+    position: relative;
+}
+.section:nth-child(5) .text {
+    position: absolute;
+    left: 300px;
+    top: 160px;
+}
+.section:nth-child(5) .qb {
+    position: absolute;
+    left: 300px;
+    top: 300px;
+}
+.section:nth-child(5) .qb img:first-child {
+    position: absolute;
+    width: 358px;
+    height: 221px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.section:nth-child(5) .qb img:nth-child(2) {
+    position: absolute;
+    width: 139px;
+    height: 130px;
+    top: -60px;
+    left: 100px;
+    transform: translateY(100px);
+    
+}
+.section:nth-child(5).now .qb img:nth-child(2)  {
+    animation: yh-05 1s 2s linear forwards;
+}
+@keyframes yh-05 {
+    from{}
+    to {transform: none}
+}
+.section:nth-child(5) .qb img:last-child {
+    position: absolute;
+    width: 204px;
+    height: 198px;
+    top: 140px;
+    left: 50px;
+    opacity: 0;
+    z-index: 999;
+}
+
+.section:nth-child(5).now .qb img:last-child {
+    animation: sofa-05 3s linear forwards;
+}
+.section:nth-child(5).now .qb img.animated {
+    animation: sofa-05-06 1s linear;
+}
+
+@keyframes sofa-05 {
+    0% {opacity: 1;transform: translateY(-600px); }
+    33.33% {opacity: 1; transform: translateY(-100px);}
+    66.67% {opacity: 1; transform: translateY(-100px);}
+    100% {opacity: 1; transform: none;}
+}
+@keyframes sofa-05-06 {
+    from {opacity: 1;}
+    to {opacity: 1;transform: translateY(550px) translateX(80px) scale(.4);}
+}
+.section:nth-child(5) .mouse {
+    width: 205px;
+    height: 819px;
+    position: absolute;
+    right: 300px;
+    top: -75px;
+    overflow: hidden;
+
+}
+.section:nth-child(5) .mouse img:first-child {
+    position: absolute;
+    bottom: 240px;
+    right: -50px;
+}
+.section:nth-child(5) .mouse img:nth-child(2) {
+    position: absolute;
+    bottom: 240px;
+    right: -50px;
+    opacity: 0;
+}
+.section:nth-child(5) .mouse img:last-child {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    transform: translateY(100%);
+}
+.section:nth-child(5).now .mouse img:last-child {
+    animation: hand-05 1s 1s linear forwards;
+}
+.section:nth-child(5).now .mouse img:nth-child(2) {
+    animation: mouse-05 .5s linear 2s forwards;
+}
+
+@keyframes hand-05 {
+    from {}
+    to {transform: none}
+}
+@keyframes mouse-05 {
+    from {}
+    to {opacity: 1;}
+}
+/* 第六屏 */
+.section:nth-child(6) {
+    background: url('../images/06-bg.png') no-repeat 20% bottom;
+    position: relative;
+}
+.section:nth-child(6) .cloud {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+}
+.section:nth-child(6) .cloud div:first-child {
+    width: 543px;
+    height: 107px;
+    position: absolute;
+    animation: cloud-06-01 80s linear alternate;
+}
+.section:nth-child(6) .cloud div:last-child {
+    width: 878px;
+    height: 71px;
+    position: absolute;
+    top: 110px;
+    animation: cloud-06-02 60s linear alternate;
+}
+@keyframes cloud-06-01 {
+    from{}
+    to{transform: translateX(900px)}
+}
+@keyframes cloud-06-02 {
+    from{}
+    to{transform: translateX(-900px)}
+}
+.section:nth-child(6) .text {
+    position: absolute;
+    left: 450px;
+    top: 230px;
+}
+.section:nth-child(6) .text div:first-child {
+    position: absolute;
+}
+.section:nth-child(6) .text div:last-child {
+    position: absolute; 
+}
+.section:nth-child(6).now .text div:first-child {
+    opacity: 0;
+    transition: all 0.5s 4.1s;
+}
+
+.section:nth-child(6) .box {
+    background: url('../images/06-box.png') no-repeat;
+    width: 123px;
+    height: 85px;
+    position: absolute;
+    left: 470px;
+    top: 300px;
+    z-index: 1000;
+    transform: translateX(-600px);
+}
+.section:nth-child(6) .box.animated {
+    animation: box-06 2.1s linear;
+}
+@keyframes box-06 {
+    0%{
+        transform: translateX(-600px);
+    }
+    33.33%{
+        transform: none;
+    }
+    66.67%{
+        transform: none;
+    }
+    100%{
+        transform: translateY(350px) scale(0.5);
+    }
+}
+.section:nth-child(6) .cart {
+    width: 221px;
+    height: 122px;
+    position: absolute;
+    bottom: 0;
+    left: 450px;
+    z-index: 1001;
+}
+.section:nth-child(6) .cart .man {
+     left: -50%;
+     bottom: -70%;
+     z-index: 1000;
+     transform: scale(0);
+}
+.section:nth-child(6).now {
+    background-position: 100% bottom;
+    transition: all 2s linear 1.1s;
+}
+.section:nth-child(6).now .cart .man {
+    animation: man-06 1s 3.1s linear forwards;
+}
+@keyframes man-06 {
+    0% {}
+    50% {transform: scale(1);left: 0;bottom: -5%;}
+    100% {transform: scale(1) translateX(220px) translateY(-110px);left: 0;bottom: -5%;}
+}
+.section:nth-child(6) .cart .address {
+    top: -40px;
+    right: 0px;
+
+}
+.section:nth-child(6) .cart .address div:first-child {
+    position: absolute;
+}
+.section:nth-child(6) .cart .address div:last-child {
+    position: absolute;
+}
+.section:nth-child(6).now .cart .address div:last-child {
+    opacity: 0;
+    transition: all 0.5s 2.1s;
+}
+.section:nth-child(6).now .address {
+    transition: all 0.5s 1.6s;
+}
+.section:nth-child(6) .cart .say {
+    opacity: 0;
+}
+.section:nth-child(6) .cart div {
+    position: absolute;
+}
+.section:nth-child(6) .door {
+    width: 106px;
+    height: 150px;
+    position: absolute;
+    right: 391px;
+    bottom: 266px;
+}
+.section:nth-child(6) .door div:first-child {
+    left: 106px;
+    bottom: -154px;
+    opacity: 0;
+    position: absolute;
+}
+.section:nth-child(6) .door div:last-child {
+    position: absolute;
+    transform-origin: right bottom;
+    transform: scale(0);
+    right: -106px;
+    bottom: -153px;
+}
+.section:nth-child(6).now .door div:first-child {
+    opacity: 1;
+    transition: all 0.5s 4.1s;
+}
+.section:nth-child(6).now .door div:last-child {
+    animation: girl 2s 4.6s linear forwards;
+}
+@keyframes girl {
+    0%{}
+    50% {transform: scale(1)}
+    100% {transform: scale(1) translateX(-200px)}
+}
+
+/* 第七屏 */
+.section:nth-child(7) {
+    position: relative;
+    background: url('../images/07-bg.png') bottom;
+}
+.section:nth-child(7) div:first-child {
+    position: absolute;
+    left: 480px;
+    top: 270px;
+}
+.section:nth-child(7) div:first-child span {
+    margin-right: 6px;
+    float: left;
+    width: 14px;
+    height: 13px;
+    background: url('../images/07-star.png');
+    opacity: 0;
+}
+.section:nth-child(7).now div:first-child span:nth-child(1) {
+    opacity: 1;
+    transition: all 1s 0.5s;
+}
+.section:nth-child(7).now div:first-child span:nth-child(2) {
+    opacity: 1;
+    transition: all 1s 1.5s;
+}
+.section:nth-child(7).now div:first-child span:nth-child(3) {
+    opacity: 1;
+    transition: all 1s 2.5s;
+}
+.section:nth-child(7).now div:first-child span:nth-child(4) {
+    opacity: 1;
+    transition: all 1s 3.5s;
+}
+.section:nth-child(7).now div:first-child span:nth-child(5) {
+    opacity: 1;
+    transition: all 1s 4.5s;
+}
+.section:nth-child(7) div:last-child {
+    position: absolute;
+    width: 72px;
+    height: 40px;
+    left: 490px;
+    top: 310px;
+    background: url('../images/07-text.png');
+    opacity: 0;
+}
+
+.section:nth-child(7).now div:last-child {
+    opacity: 1;
+    transition: all 1s 5.5s;
+}
+
+/* 第八屏 */
+.section:nth-child(8) {
+    background: url('../images/08-bg.png');
+    position: relative;
+}
+.section:nth-child(8) .in {
+    position: absolute;
+    width: 389px;
+    height: 160px;
+    background: url('../images/08-btn01.png');
+    left: 0;
+    right: 0;
+    top: 100px;
+    margin: auto;
+}
+.section:nth-child(8) .in:hover {
+    background: url('../images/08-btn02.gif');
+}
+.section:nth-child(8) div:last-child {
+    background: url('../images/08-hand.png');
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 170px;
+    height: 449px;
+}
+
+.section:nth-child(8) .again {
+    background: url('../images/08-again.png');
+    width: 105px;
+    height: 34px;
+    position: absolute;
+    right: 200px;
+    top: 100px;
+}
